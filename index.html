@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/show-password-toggle.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- fav -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+    <link rel="manifest" href="img/fav/site.webmanifest">
+    <link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#0caee3">
+    <meta name="msapplication-TileColor" content="#0caee3">
+    <meta name="theme-color" content="#0CAEE3">
+    <title>Билетоф Личный кабинет></title>
+</head>
+<body>
+<div class="container lk">
+    <div class="row flex-nowrap lk__row align-items-center justify-content-center flex-column">
+
+        <div class="col text-center lk__header">
+            <img class="lk__logo logo" src="img/logo.svg" alt="билетоф.ком">
+            <h1 class="lk__title">Личный кабинет Билетоф.Ком</h1>
+        </div>
+
+        <div class="col forms">
+
+            <div class="form form__start">
+                <h2 class="form__title">Способ входа в Личный кабинет</h2>
+                <div class="form__way way">
+
+                    <div class="login-way__item way__login">
+                        <input class="radio" id="way-login" type="radio" name="login-way" value="По логину">
+                        <label class="radio-label" for="way-login">По логину</label>
+                    </div>
+
+                    <div class="login-way__item way__email">
+                        <input class="radio" id="way-email" type="radio" name="login-way" value="По email">
+                        <label class="radio-label" for="way-email">По e-mail</label>
+                    </div>
+
+                    <div class="login-way__item way__phone">
+                        <input class="radio" id="way-phone" type="radio" name="login-way" value="По телефону">
+                        <label class="radio-label" for="way-phone">По телефону</label>
+                    </div>
+
+                </div>
+
+                <!-- FORMS -->
+                <form action="">
+
+                    <div class="forms">
+                        <input class="form-control form__login forms__item" placeholder="Логин" type="text" required>
+                        <input class="form-control form__email forms__item hidden" placeholder="E-mail" type="email" required>
+                        <input class="form-control form__phone forms__item hidden" placeholder="Телефон" type="phone" required>
+                    </div>
+                    
+                    <div class="input-group pass">
+                        <input type="password" placeholder="Пароль" class="form-control rounded" required spellcheck="false" autocorrect="off" autocapitalize="off" name="current-password" autocomplete="current-password">
+                        <button id="toggle-password" type="button" class="d-none"
+                            aria-label="Показать пароль. Осторожно: ваш пароль будет виден на экране.">
+                        </button>
+                    </div>
+
+                    <a href="#">Восстановить пароль</a>
+                    <p class="error__text hidden">При выполнении операции произошла ошибка</p>
+
+                    <input class="form-control send" type="submit" value="Войти в Личный кабинет">
+
+                </form>
+
+            </div>
+
+            <div class="form form__end hidden">
+                <h2 class="form__title">На email пользователя Egor был отправлен код для  подтверждения входа в личный кабинет</h2>
+                <p>Код для подтверждения входа в личный кабинет:</p>
+
+                <!-- FORMS -->
+                <form action="">
+
+                    <input class="form-control form__code" type="text" required>
+                    <div class="no-code">
+                        <p class="no-code__link link">Я не получил код</p>
+                        <div class="no-code__text hidden">
+                            <p class="gray">
+                                Если Вы не получили письмо с  кодом подтверждения входа в Личный кабинет, проверьте, пожалуйста, папки автоматического разбора писем в почтовом ящике, такие как “Рассылки”,  “Спам”  и т.д.
+                            </p>
+                            <p class="gray">
+                                Если в указанных папках писем нет,  то обратитесь, пожалуйста, в Группу поддержки клиентов Билетоф. Ком <a class="gray" href="mailto:support@biletof.com">(support@biletof.com)</a>
+                            </p>
+                        </div>
+                    </div>
+                    <p class="error__text hidden">Код для подтверждения входа в Личный кабинет указан некорректно.<br />Использовано попыток 1 из 3</p>
+
+                    <input class="form-control confirm" type="submit" value="Подтвердить">
+                    <p class="gray">Повторная отправка кода подтверждения входа возможна через 5 минут.</p>
+                </form>
+            </div>
+
+            <div class="form form__error hidden">
+                <h2 class="form__title">Исчерпано количество попыток указания кода подтверждения!</h2>
+                <p class="gray">Повторная отправка кода подтверждения входа возможна через 5 минут.</p>
+            </div>
+
+        </div>
+
+        <div class="col lk__footer d-flex align-items-end justify-content-center">
+            <a class="lk__sitelink" href="">Основной сайт Билетоф.Ком</a>
+        </div>
+
+    </div>
+</div>
+<script src="bootstrap/bootstrap.bundle.min.js"></script>
+<script src="bootstrap/show-password-toggle.min.js"></script>
+<!-- <script src="jquery-3.7.0.min"></script> -->
+<script src="script.js"></script>
+</body>
+</html>
