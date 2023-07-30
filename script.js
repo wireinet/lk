@@ -10,6 +10,8 @@ const formPhone = document.querySelector('.form__phone');
 const formStart = document.querySelector('.form__start');
 const formEnd = document.querySelector('.form__end');
 const formError = document.querySelector('.form__error');
+const formRestore = document.querySelector('.form__restore-pass');
+const formRequestMessage = document.querySelector('.form__restore-request-message');
 
 const forms = document.querySelectorAll('.forms__item');
 
@@ -69,6 +71,30 @@ codeConfirm.addEventListener('click', function(){
     }, 5000)
 
 })
+// Форма 3 Восстановление пароля
+const formRestorePass = ()=>{
+    formStart.classList.add('flyaway');
+        setTimeout(()=>{
+            formStart.classList.add('hidden');
+            formRestore.classList.remove('hidden');
+            setTimeout(()=>{formRestore.classList.add('reveal');}, 50);
+            }, 300)
+    }
+    document.querySelector('.restore').addEventListener('click', formRestorePass);
+
+// Запрос
+// const formRequestSend = ()=>{
+//     formRestore.classList.add('flyaway');
+//         setTimeout(()=>{
+//             formRestore.classList.add('hidden');
+//             formRequestMessage.classList.remove('hidden');
+//             setTimeout(()=>{formRequestMessage.classList.add('reveal');}, 50);
+//             }, 300)
+//     }
+    document.querySelector('.restore-request-send').addEventListener('click', ()=>{
+        formRestore.classList.add('hidden');
+        formRequestMessage.classList.remove('hidden');
+    });
 
 // NO_CODE
 const noCodeLink = document.querySelector('.no-code__link');
@@ -80,5 +106,18 @@ noCodeLink.addEventListener('click', function(){
 })
 noCodeText.addEventListener('click', function(){
     noCodeLink.classList.remove('hidden');
+    this.classList.add('hidden');
+});
+
+// NO_REQUEST LINK
+const noRequestLink = document.querySelector('.no-request__link');
+const noRequestText = document.querySelector('.no-request__text');
+
+noRequestLink.addEventListener('click', function(){
+    noRequestText.classList.remove('hidden');
+    this.classList.add('hidden');
+})
+noRequestText.addEventListener('click', function(){
+    noRequestLink.classList.remove('hidden');
     this.classList.add('hidden');
 });

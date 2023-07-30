@@ -25,7 +25,6 @@
 
         <div class="col text-center lk__header">
             <img class="lk__logo logo" src="img/logo.svg" alt="билетоф.ком">
-            <h1 class="lk__title">Личный кабинет Билетоф.Ком</h1>
         </div>
 
         <div class="col forms">
@@ -67,9 +66,8 @@
                         </button>
                     </div>
 
-                    <a href="#">Восстановить пароль</a>
+                    <a class="restore" href="#">Восстановить пароль</a>
                     <p class="error__text hidden">При выполнении операции произошла ошибка</p>
-
                     <input class="form-control send" type="submit" value="Войти в Личный кабинет">
 
                 </form>
@@ -105,6 +103,26 @@
             <div class="form form__error hidden">
                 <h2 class="form__title">Исчерпано количество попыток указания кода подтверждения!</h2>
                 <p class="gray">Повторная отправка кода подтверждения входа возможна через 5 минут.</p>
+            </div>
+
+            <div class="form form__restore-pass hidden">
+                <h2 class="form__title">Восстановление пароля</h2>
+                <input class="form-control" type="email" required placeholder="email">
+                <input class="form-control restore-request-send" type="submit" value="Восстановить пароль">
+            </div>
+            
+            <div class="form form__restore-request-message hidden">
+                <h2 class="form__title">Восстановление пароля</h2>
+                <p>На указанный Email отправлено письмо со ссылкой для восстановления пароля</p>
+                <p class="no-request__link link">Письмо со ссылкой не пришло</p>
+                <div class="no-request__text hidden">
+                    <p class="gray">
+                        Проверьте, пожалуйста, папки автоматического разбора писем в почтовом ящике, такие как “Рассылки”,  “Спам”  и т.д.
+                    </p>
+                    <p class="gray">
+                        Если в указанных папках писем нет,  то обратитесь, пожалуйста, в Группу поддержки клиентов Билетоф. Ком <a class="gray" href="mailto:support@biletof.com">(support@biletof.com)</a>
+                    </p>
+                </div>
             </div>
 
         </div>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/show-password-toggle.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- fav -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+    <link rel="manifest" href="img/fav/site.webmanifest">
+    <link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#0caee3">
+    <meta name="msapplication-TileColor" content="#0caee3">
+    <meta name="theme-color" content="#0CAEE3">
+    <title>Билетоф Личный кабинет></title>
+</head>
+<body>
+<div class="container lk">
+    <div class="row flex-nowrap lk__row align-items-center justify-content-center flex-column">
+
+        <div class="col text-center lk__header">
+            <img class="lk__logo logo" src="img/logo.svg" alt="билетоф.ком">
+        </div>
+
+        <div class="col forms">
+
+            <div class="form form__start">
+                <h2 class="form__title">Восстановление пароля</h2>
+                <form action="">
+
+                    <div class="forms">
+                        <label for="newpass">Новый пароль</label>
+                        <input id="newpass" class="form-control form__email forms__item" type="email" required>
+                        <label for="newpassrepeate">Новый пароль (повторите):</label>
+                        <input id="newpassrepeate" class="form-control form__email forms__item" type="email" required>
+                    </div>
+                    <p class="error__text error__password-dont-match hidden">Пароли не совпадают</p>
+                    <input class="form-control send" type="submit" value="Установить пароль">
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class="col lk__footer d-flex align-items-end justify-content-center">
+            <a class="lk__sitelink" href="">Основной сайт Билетоф.Ком</a>
+        </div>
+
+    </div>
+</div>
+<script src="bootstrap/bootstrap.bundle.min.js"></script>
+<script>
+    document.querySelector('.send').addEventListener('click', (e)=>{
+        e.preventDefault();
+        document.querySelector('.error__password-dont-match').classList.remove('hidden');
+    });
+</script>
+</body>
+</html>
